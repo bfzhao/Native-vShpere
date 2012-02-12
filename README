@@ -1,0 +1,30 @@
+READ THIS FILE FIRST!
+
+In order to make it easy to use, this windows version solution is provided. You can also generate the wrapper from VIM-vSphere-SDK-Cpp-Wrapper solution. This isa prebuild versio for windows, plus some samples of how to use. 
+
+There are three projects at this solution:
+  1. the vSphereNative static library
+  2. the command line based managed object browser and
+  3. a simple program to list all VMs at a vCenter or ESXi
+
+
+To use this, you need:
+
+ - OpenSSL, 1.0.0g. and point the include path and library path to the correct place you set (this is the only operation you need to do before build the solution. For my locase case, I put the openssl at C:\openssl\dir)
+ - Visual Studio 2010. I setup the solutoin with VS 2010, but I think other older versions (2005, 2006) work also, but you need setup the solution manually and adjust project build options and I'll list them below.
+ - gSOAP, 2.8.7. You may not need if there are some errors on build stdsoap.cpp file.
+
+Now, you can open the solution directly and try ot build them all. I hard coded ESXi IP address. username/password in sample source, you need adjust or remove them.
+
+The options that need change if you use VS2005 or VS2008:
+  1. vSphereNative Property -> Configuration Properties -> C/C++ -> General -> Additional Include Directories (C:\openssl\dir\include)
+  2. vSphereNative Property -> Configuration Properties -> CC/C++ -> Preprocessor -> Preprocessor Definitions (Add following MACRO: WITH_COOKIES; WITH_OPENSSL)
+  3. soapC.cpp -> Properties -> Configuration Properties -> C/C++ -> Commandline -> Additional Options (/bigobj)
+  4. CliMOB/ListVMs Properties -> Configuration Properties -> C/C++ -> General -> Additional Include Directories (Add ..\vSphere)
+  5. CliMOB/ListVMs Properties -> Configuration Properties -> Linker -> General -> Additional Library Diectories (C:\openssl\dir\lib;..\debug)
+  6. CliMOB/ListVMs Properties -> Configuration Properties -> Linker -> Input -> Additional Dependencies (Add libeay32.lib;ssleay32.lib;vSphereNative.lib;) 
+  7. And disable precompiled header option in all projects.
+
+
+
+
