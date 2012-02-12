@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vSphereNative", "vSphereNative\vSphereNative.vcxproj", "{AB194D9B-77A1-4A9F-8CA1-353DE0B2C2AF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CliMOB", "CliMOB\CliMOB.vcxproj", "{62DCEC82-457A-4A59-991B-600CC0425EA6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AB194D9B-77A1-4A9F-8CA1-353DE0B2C2AF} = {AB194D9B-77A1-4A9F-8CA1-353DE0B2C2AF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ListVMs", "ListVMs\ListVMs.vcxproj", "{DBDBF65A-D261-4EB2-A69C-10C73CD51291}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB194D9B-77A1-4A9F-8CA1-353DE0B2C2AF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AB194D9B-77A1-4A9F-8CA1-353DE0B2C2AF}.Debug|Win32.Build.0 = Debug|Win32
+		{AB194D9B-77A1-4A9F-8CA1-353DE0B2C2AF}.Release|Win32.ActiveCfg = Release|Win32
+		{AB194D9B-77A1-4A9F-8CA1-353DE0B2C2AF}.Release|Win32.Build.0 = Release|Win32
+		{62DCEC82-457A-4A59-991B-600CC0425EA6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{62DCEC82-457A-4A59-991B-600CC0425EA6}.Debug|Win32.Build.0 = Debug|Win32
+		{62DCEC82-457A-4A59-991B-600CC0425EA6}.Release|Win32.ActiveCfg = Release|Win32
+		{62DCEC82-457A-4A59-991B-600CC0425EA6}.Release|Win32.Build.0 = Release|Win32
+		{DBDBF65A-D261-4EB2-A69C-10C73CD51291}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DBDBF65A-D261-4EB2-A69C-10C73CD51291}.Debug|Win32.Build.0 = Debug|Win32
+		{DBDBF65A-D261-4EB2-A69C-10C73CD51291}.Release|Win32.ActiveCfg = Release|Win32
+		{DBDBF65A-D261-4EB2-A69C-10C73CD51291}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
